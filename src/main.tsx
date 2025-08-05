@@ -1,22 +1,15 @@
-/*
-This file:
-
-Initializes the React app
-Wraps it in BrowserRouter for routing
-Mounts it to the #root div in index.html
- */
-
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 import App from './App';
-import './index.css'; // optional if using Tailwind
+import './index.css'; // Tailwind styles and global styles
 
+const rootElement = document.getElementById('root');
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-    <React.StrictMode>
-        <BrowserRouter>
+if (rootElement) {
+    createRoot(rootElement).render(
+        <StrictMode>
             <App />
-        </BrowserRouter>
-    </React.StrictMode>
-);
+        </StrictMode>
+    );
+}
+
