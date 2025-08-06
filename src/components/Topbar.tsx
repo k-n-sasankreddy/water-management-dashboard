@@ -5,9 +5,7 @@ const Topbar: React.FC = () => {
     return (
         <header className="bg-white px-6 py-4 flex items-center justify-between shadow-md">
             <div className="w-full text-center">
-                <h1 className="text-4xl font-extrabold text-red-900 tracking-wide">
-                    💧 Water Management Dashboard
-                </h1>
+                
             </div>
             <div className="flex items-center gap-6">
                 <ThemeToggle />
